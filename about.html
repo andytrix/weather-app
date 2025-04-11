@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 data-key="title">Weather App</h1>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="menu">
+      <a href="index.html" data-key="home">Home</a>
+      <a href="calculator.html" data-key="compare">Temperature Comparison</a>
+      <a href="game.html" data-key="game">StormDodger</a>
+      <a href="about.html" data-key="about">About</a>
+      <span class="divider"></span>
+      <button id="langToggle" style="background: none; border: none; font-weight: bold; cursor: pointer;">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="info-box" id="indexSecondBox">
+      <h2 data-key="aboutTitle"></h2>
+      <p data-key="aboutP1"></p>
+      <p data-key="aboutP2"></p>
+      <p data-key="aboutP3"></p>
+      <p data-key="aboutP4"></p>
+      <p data-key="apiUsed"></p>
+      <p data-key="author"></p>
+    </div>
+  </main>
+
+  <script>
+    const bg = localStorage.getItem("latestBgImage") || "default.jpg";
+    document.body.style.backgroundImage = `url('img/${bg}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+  </script>
+
+  <script src="js/script.js" defer></script>
+
+  <footer style="text-align: center; margin-top: 2rem; padding: 1rem; color: white; font-size: 0.9rem;">
+    © 2025 andytrix. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1 data-key="title">Weather App</h1>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="menu">
+      <a href="index.html" data-key="home">Home</a>
+      <a href="calculator.html" data-key="compare">Temperature Comparison</a>
+      <a href="game.html" data-key="game">StormDodger</a>
+      <a href="about.html" data-key="about">About</a>
+      <span class="divider"></span>
+      <button id="langToggle" style="background: none; border: none; font-weight: bold; cursor: pointer;">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="info-box" id="indexSecondBox">
+      <h2 data-key="compareTitle"></h2>
+      <p id="instruction" data-key="instruction"></p>
+
+      <div id="inputBox">
+        <form id="tempCompareForm">
+          <label for="city1" data-key="city1Label"></label>
+          <input type="text" id="city1" required />
+          
+          <label for="city2" data-key="city2Label"></label>
+          <input type="text" id="city2" required />
+          
+          <button type="submit" data-key="compareButton"></button>
+        </form>
+      </div>
+
+      <div id="result" style="margin-top: 1.5rem;"></div>
+    </div>
+  </main>
+
+  <script src="js/calculator.js"></script>
+  <script src="js/script.js" defer></script>
+
+  <footer style="text-align: center; margin-top: 2rem; padding: 1rem; color: white; font-size: 0.9rem;">
+    © 2025 andytrix. All rights reserved.
+  </footer>
+</body>
+</html>
